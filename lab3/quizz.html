@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+     <meta name="author" content="Ricardo Pilartes">
+     <meta name="keywords" content="palavras chave">
+     <meta name="description" content="Website sobre Lisboa">
+     <link rel="stylesheet" href="estilos.css">
+
+     <title>Lisboa-PT</title>
+</head>
+
+ <body>
+<header>
+
+<h1>Lisboa</h1>
+     <figure>
+            <img src="images/lisboa.jpg">
+
+         <figcaption>
+             <p>Lisboa! Uma cidade bastante linda</p>
+             <details>
+                 Saiba mais sobre Lisboa
+             </details>
+         </figcaption>
+
+     </figure>
+
+ </header>
+
+ <nav>
+    <a href="index.html">🗂️Introdução | </a>
+    <a href="local.html">🗺️Localização | </a>
+    <a href="multimedia.html">🎞️Multimédia | </a>
+    <a href="info.html">ℹ️ Informação | </a>
+    <a href="quizz.html">✍️Quizz | </a>
+    <a href="html5-css.html">👨‍💻️Html e Css | </a>
+    <a href="../index.html">🏠Home</a>
+
+ </nav>
+ <main>
+     <section>
+        <h3>Quizz</h3>
+        <p>Formulário e Quizz sobre a cidade de Lisboa.</p>
+     </section>
+
+     <section>
+        <form id="form1" method="POST" action="mailto: ricardopilartes03@gmail.com" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Mostre que conhece Lisboa</legend>
+
+                <fieldset >
+                     <legend>Info</legend>
+                     <input class="user" type="text" autocomplete="on"  placeholder="Insira seu nome" name="nome" required>
+                     <input class="user" type="text"  autocomplete="on" placeholder="Insira seu apelido" name="apelido">
+                     <input class="user" type="email" autocomplete="off" placeholder="Insira seu email" name="email" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Perguntas</legend>
+
+                    <p> <b>Qual das seguintes é a capital de Portugal?</b> </p>
+
+                    <input type="radio" id="lisboa" name="fav_language" value="Lisboa">
+                    <label for="lisboa">Lisboa</label>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">Porto</label>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">Braga</label>
+
+                    <p><b>Selecione somente os distritos de Lisboa?</b></p>
+
+                      <input type="checkbox" id="option1" name="option1" value="Leiria">
+                      <label for="option1"> Leiria</label>
+                      <input type="checkbox" id="option2" name="option2" value="Braga">
+                      <label for="option2"> Braga</label>
+                      <input type="checkbox" id="option3" name="option3" value="Santarém">
+                      <label for="option3">Santarém</label>
+
+                    <p><b>Diga a data de inauguração dos metros de Lisboa</b></p>
+
+                      <label for="datemin">Insira uma data depois de 1900</label>
+                      <input type="date" id="datemin" name="datemin" min="1900-01-01">
+
+                    <p><b>Quanto mede a rua da Betesga que é tida como a mais pequena de Lisboa?</b></p>
+
+                      <label for="vol">Mínimo 0 - máximo 15 metros</label>
+                      <input type="range" id="vol" name="vol" min="0" max="10">
+
+                    <p><b>Quantas estações de metro existem em lisboa?</b></p>
+
+                      <label for="quantity">Quantidade (Entre 0 and 100):</label>
+                      <input type="number" id="quantity" name="quantity" min="1" max="5">
+
+                    <p><b>Selecione a cor dos elétricos em Lisboa: </b></p>
+
+                      <label for="favcolor">Cor: </label>
+                      <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+                     <p><b>Insira o nome do governador de Lisboa </b></p>
+                    <input type="text" size="15" placeholder="Nome do governador">
+
+                     <p><b>Quantos anos tem a cidade de Lisboa?</b></p>
+                    <input type="text"  maxlength="3" placeholder="Idade">
+
+                    <p><b>Qual é o código do país da capital de Lisboa?</b></p>
+                    <input type="text" pattern="[A-Za-z]{3}"  placeholder="Código">
+
+
+                    <p><b>Há uma loja na baixa que juntou duas iguarias bem conhecidas em um só produto. Qual é?</b></p>
+                    <select name="iguaria">
+                        <option value="Presunto e queijo de cabra">Presunto e queijo de cabra</option>
+                        <option value="Cozido e pão de mafra">Cozido e pão de mafra</option>
+                        <option value="Ovos moles e rabanadas">Ovos moles e rabanadas</option>
+                        <option value="Bolinho de bacalhau e queijo da serra">Bolinho de bacalhau e queijo da serra</option>
+                    </select>
+
+                    <p><b>Há uma segunda circular. Mas e a primeira?</b></p>
+                    <input list="circular" name="circular">
+                    <datalist id="circular">
+                        <option value="Nunca existiu">
+                        <option value="Desapareceu com o terramoto">
+                        <option value="Existiu e conectou alcântra e santa Apolônia.">
+                    </datalist>
+
+                </fieldset>
+
+
+
+            </fieldset>
+
+
+        </form><br>
+
+         <input form="form1" type="image" src="images/submit.png" alt="Submit" width="48" height="48"><br><br>
+         <p><b>Deixe o seu comentário</b></p>
+          <textarea cols="99" rows="8" placeholder="O que achou do Quizz?">
+
+         </textarea>
+     </section>
+ </main>
+
+
+ <footer>
+     <h3> Nome: Ricardo | Número: a22111667 | Universidade: ULHT </h3>
+ </footer>
+
+ </body>

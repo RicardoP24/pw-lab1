@@ -1,0 +1,81 @@
+header > h1::first-letter {
+    font-size: xxx-large;
+}
+
+
+
+.{
+    font-family: fantasy;
+}
+
+p#importante{ /*O elemento p neste caso só é necessário para destinguir id de paginas distintas*/
+
+    color: red;
+
+}
+/**/
+[type="text"]{
+
+    border-width: 2px;
+}
+nav a{
+text-decoration:none
+}
+
+nav a:hover{
+  color: red;
+}
+
+nav a:link{
+    color: blue;
+ }
+
+nav a:visited{
+    color: rgb(73, 27, 27);
+}
+
+nav a:active{
+    color: rgb(73, 27, 27);
+}
+
+nav a:hover::before{
+    content: ".";
+}
+
+nav a:hover::after{
+    content: ".";
+}
+
+table tr:nth-child(even){
+    background-color: #ccc
+}
+
+#texto-intro::first-letter{
+font-size: xx-large;
+}
+
+#texto-intro::first-line{
+font-weight:bold;
+}
+
+fieldset input:not([class^="user"]){
+display: block;
+}
+
+figure img{
+border: 8px solid red;
+}
+
+a img{
+border: 2px solid black;
+
+}
+iframe{
+border: 2px solid black;
+width:600px;
+height:400px;
+}
+
+h3#poema + p b{
+    color: red;
+}
