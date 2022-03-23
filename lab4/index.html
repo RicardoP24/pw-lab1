@@ -1,0 +1,442 @@
+<!DOCTYPE>
+<html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100&display=swap');
+
+*{box-sizing:border-box;}
+
+.capitais{
+    display:flex;
+	flex-flow: row wrap;
+    padding: 50px;
+    background-color:rgb(238,248,248);
+
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.capitais > div {
+
+    border-radius:10px;
+    box-shadow: 5px 5px 15px #888888;
+    margin:10px;
+    display:flex;
+
+}
+
+.capitais img{
+    border-radius: 10px 0 0 10px;
+    height:100%;
+}
+
+.capitais div div:last-child{
+    width:150px;
+    background-color:white;
+    padding:20px;
+    border-radius: 0 10px 10px 0;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+nav{
+    display:flex;
+    justify-content:left;
+    flex-flow: row;
+    gap: 5px;
+
+}
+nav a:hover{
+      background-color:#fafafa;
+      font-weight:bold;
+      border-radius:10px;
+
+}
+nav a{
+    text-decoration:none;
+    padding:20px;
+     color:black;
+}
+nav a:last-child{
+    margin-left:auto;
+}
+
+nav a:last-child:hover{
+    color:red;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+#header{
+    height:75vh;
+
+    color:white;
+    background-size:cover;
+    background-position:center;
+     background-image:url('imagens/header.jpg');
+ }
+
+#header div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:column wrap;
+
+}
+ .layer {
+    background-color: rgba(28, 153, 128, 0.7);
+    height:75vh;
+    width:100%;
+}
+
+.dicas{
+    display:flex;
+    flex-flow:row wrap;
+    padding:10px 20px;
+    justify-content:space-between;
+    align-items:space-between;
+    gap:20px;
+    background-color:rgb(238,248,248);
+
+   }
+.dicas div{
+    box-shadow:5px 5px 15px #888888;
+    padding:20px;
+     height:170px;
+     width:22vw;
+    border-radius:10px;
+    background-color:#fff;
+
+}
+.dicas div p{
+    display:inline-block;
+
+    max-height:3em;
+}
+
+.alentejo{grid-area:alentejo;}
+.algarve{grid-area:algarve;}
+.centro{grid-area:centro;}
+.lisboa{grid-area:lisboa;}
+.madeira{grid-area:madeira;}
+.porto{grid-area:porto;}
+
+.destino{
+    display:grid;
+    grid-template-areas: 'alentejo  algarve lisboa  porto'
+                         'centro centro  madeira  porto';
+    grid-template-columns: 20vw 20vw 20vw 40fr;
+    grid-template-rows: 30vh 30vh;
+    padding:20px;
+    gap:10px;
+ }
+.destino > div{
+    border-radius:5px;
+    display:flex;
+    color:white;
+    position:relative;
+
+}
+.destino .alentejo{
+    background-image:url('./imagens/Alentejo.jpg');
+    background-position:center;
+ }
+.destino .algarve{
+    background-image:url('./imagens/Algarve.jpg');
+    background-position:center;
+}
+.destino .madeira{
+    background-image:url('./imagens/Madeira.jpg');
+    background-position:center;
+}
+
+.destino .centro{
+    background-image:url('./imagens/centro.jpg');
+    background-position:center;
+    background-size:cover;
+
+}
+.destino .lisboa{
+    background-image:url('./imagens/Lisboa.jpg');
+    background-position:center;
+}
+.layer2{
+    width:20vw;
+    height:30vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:5px;
+
+}
+
+.layer3{
+
+    width: calc(60vw + 20px);
+    height:30vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:5px;
+
+}
+
+
+
+.destino > div h3{
+    position:absolute;
+    bottom:0;
+    left:5px;
+}
+.destino > div h2{
+    position:absolute;
+    bottom:25px;
+    left:5px;
+}
+
+
+
+.destino > div p{
+    font-weight:bold;
+    position:absolute;
+    left:5px;
+ }
+
+.porto h3{
+    color:black;
+}
+.porto h2{
+    color:black;
+}
+
+.porto p{
+color:black;
+}
+ .porto img{
+    width:auto;
+    height:calc(40vh);
+    border-radius:5px;
+ }
+
+ .porto {
+ display:flex;
+ position:relative;
+ flex-direction:horizontal;
+  }
+
+@media(max-width:900px){
+  .destino{
+       grid-template-areas:
+        'alentejo'
+        'madeira'
+        'lisboa'
+        'algarve'
+        'centro'
+        'porto';
+
+  grid-template-columns:auto;
+  grid-template-rows:30vh 30vh 30vh 30vh 30vh 30vh ;
+
+  }
+  .destino div{
+    background-size:cover;
+  }
+    .porto{
+        position:relative;
+    }
+    .porto div{
+        position:absolute;
+    }
+  .layer2{
+    width:100%;
+  }
+  .layer3{
+    width:100%
+  }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW Labs</title>
+
+</head>
+
+<body>
+<nav>
+    <a href="">Cidades Europeias</a>
+    <a href="">Dicas para viajar</a>
+    <a href="">Destino dos sonhos</a>
+    <a href="">Voltar</a>
+</nav>
+
+<div id="header">
+    <div class="layer">
+        <h1>BEM-VINDO A UNIÃO EUROPEIA</h1>
+        <p>Aprecie as maravilhas que o continente europeu tem a oferecer</p>
+    </div>
+</div>
+
+<h2>Cidades Europeias</h2>
+
+<div class="capitais">
+
+    <div>
+        <div> <img src="./imagens/bruxelas.avif" alt=""> </div>
+        <div> <p>Bruxelas</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/budapeste.avif" alt=""> </div>
+        <div> <p>Budapeste</p> </div>
+    </div>
+
+
+    <div>
+        <div> <img src="./imagens/lisboa.avif" alt=""> </div>
+        <div> <p>Lisboa</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/londres.avif" alt=""> </div>
+        <div> <p>Londres</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/milao.avif" alt=""> </div>
+        <div> <p>Milão</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/paris.avif" alt=""> </div>
+        <div> <p>Paris</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/praga.avif" alt=""> </div>
+        <div> <p>Praga</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/reykiavik.avif" alt=""> </div>
+        <div> <p>reykiavik</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/roma.avif" alt=""> </div>
+        <div> <p>Roma</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/varsovia.avif" alt=""> </div>
+        <div> <p>Varsovia</p> </div>
+    </div>
+
+    <div>
+        <div> <img src="./imagens/viena.avif" alt=""> </div>
+        <div> <p>Viena</p> </div>
+    </div>
+</div>
+
+<h2>Dicas para viajar</h2>
+
+<div class="dicas">
+    <div>
+        <h3>Viaje devagar</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+    <div>
+        <h3>Planeje</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+     <div>
+        <h3>Siga seu coração</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+    <div>
+        <h3>Viaje devagar</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+    <div>
+        <h3>Planeje</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+    <div>
+        <h3>Siga seu coração</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+
+    </div>
+
+    <div>
+        <h3>Viaje devagar</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+    <div>
+        <h3>Planeje</h3>
+        <p>Eu sempre fui fast traveller e levei mais de 1 ano e meio até entender os benefícios de viajar devagar.</p>
+    </div>
+
+</div>
+
+<h2>Destino dos Sonhos</h2>
+
+<div class="destino">
+
+     <div class="alentejo">
+         <div class="layer2">
+             <p>Activities</p>
+             <h2>Alentejo</h2>
+             <h3>6 nights from £130</h3>
+         </div>
+     </div>
+
+     <div class="madeira">
+         <div class="layer2">
+             <p>Activities</p>
+             <h2>Madeira</h2>
+             <h3>6 nights from £130</h3>
+         </div>
+     </div>
+
+     <div class="algarve">
+         <div class="layer2">
+             <p>Activities</p>
+             <h2>Algarve</h2>
+             <h3>6 nights from £130</h3>
+         </div>
+     </div>
+
+     <div class="porto">
+
+         <img  src="./imagens/porto e norte.jpg">
+
+
+                 <div>
+                     <h2>Porto e norte</h2>
+                     <h3>6 nights from £130</h3>
+                 </div>
+
+     </div>
+
+     <div class="centro">
+         <div class="layer3">
+             <p>Activities</p>
+             <h2>Centro</h2>
+             <h3>6 nights from £130</h3>
+         </div>
+     </div>
+
+    <div class="lisboa">
+        <div class="layer2">
+             <p>Activities</p>
+                  <h2>Lisboa</h2>
+                 <h3>6 nights from £130</h3>
+         </div>
+    </div>
+
+</div>
+
+</body>
+</html>
